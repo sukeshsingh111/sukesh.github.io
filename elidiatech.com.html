@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+  <head>
+    <meta charset="utf-8">
+    <!-- <title>Responsive Navigation Bar</title> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- slider -->
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Html5 slider" />
+  
+  <!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+  <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+  <script type="text/javascript" src="engine1/jquery.js"></script>
+
+
+  </head>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+
+
+
+
+nav{
+
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 300%;
+  background-repeat: no-repeat;
+  animation: gradient 15s ease infinite;  padding: 52px 42px;  padding: 5px 40px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+nav ul{
+   
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 300;
+  cursor: default;
+  user-select: none;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: cyan;
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
+  display: none;
+}
+nav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+.conatiner{
+  margin-top: 150px;
+}
+
+.one{
+  /*border: 1px solid red;*/
+  /*bottom: 100px;*/
+  position: relative;
+padding-top: 50px;
+padding-left: 50px;
+width: 90%;
+margin: auto;
+margin-top: 50px;
+padding-bottom: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2{
+  font-weight: bold;
+}
+p{
+  margin-top: 20px;
+  text-transform: capitalize;
+  text-indent: 50px;
+}
+
+.main{
+  text-align: center;font-size: 35px; font-weight: bold;
+  padding: 50px;
+}
+
+
+/*img*/
+.images{
+ max-width: 1200px;
+ margin: auto;
+ overflow: auto;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /*max-width: 900px;*/
+}
+.gallery{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 390px;
+
+}
+ .gallery img{
+  width: 100%;
+  height: auto;
+ }
+ .desc{
+  padding: 20px;
+  text-align: center;
+ }
+ .contact{
+  background-color: #707070;
+  overflow: auto;
+  padding: 160px;
+  margin: 30px auto;
+   
+
+ }
+ .one1{
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 520px;
+  color: white;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ 
+ .t{
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 520px;
+  color: black;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  padding-right: 30px;
+  padding-left: 80px;
+ }
+ #form{
+  padding: 5px;
+  padding-left: 100px;
+ }
+.footer{
+  background-color: #f0f0f0;
+  text-align: center;
+  height: 150px;
+  padding-top: 70px;
+}
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
+@media all and (max-width: 581px){
+.images{
+ width: 100%;
+ }
+.gallery img{
+  width: 100%;
+  background-size: cover;
+  height: auto;
+ 
+   border: 5px solid red;
+
+}
+
+}
+
+@media all and (max-width: 1287px){
+.images{
+ overflow: auto;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /*max-width: 900px;*/
+}
+.images{
+ }
+ .gallery{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 340px;
+
+}
+.gallery img{
+  background-size: cover;
+  height: auto;
+ 
+   border: 5px solid red;
+
+}
+
+
+.contact{
+  background-color: #707070;
+  overflow: auto;
+  padding: 160px;
+  margin: 30px auto;
+   
+
+ }
+ .one1{
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 320px;
+  color: white;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ 
+ .t{
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 320px;
+  color: black;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  padding-right: 30px;
+  padding-left: 40px;
+ }
+
+}
+
+@media all and (max-width: 1052px){
+
+.images{
+ overflow: auto;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /*max-width: 900px;*/
+}
+.images{
+ }
+ .gallery{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 310px;
+
+}
+.gallery img{
+  background-size: cover;
+  height: auto;
+ 
+   border: 5px solid red;
+
+}
+
+}
+@media all and (max-width: 950px){
+.gallery{
+  margin: 2px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+
+}
+
+.contact{
+  background-color: #707070;
+  overflow: auto;
+  padding: 160px;
+  margin: 30px auto;
+   
+
+ }
+ .one1{
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 320px;
+  color: white;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ 
+ .t{
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 320px;
+  color: black;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  padding-right: 30px;
+  padding-left: 40px;
+ }
+
+}
+@media all and (max-width: 448px){
+
+  .gallery{
+  margin: 2px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 100%;
+
+}
+.gallery img{
+  background-size: cover;
+  height: auto;
+  width: 100%;
+ 
+   border: 5px solid red;
+
+}
+.contact{
+  background-color: #707070;
+  overflow: auto;
+  padding: 160px;
+  margin: 30px auto;
+  position: relative;
+
+ }
+.one1{
+  border: 1px solid #ccc;
+  max-width: 320px;
+  color: white;
+  height: 300px;
+  left: -100px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ 
+ .t{
+  border: 1px solid #ccc;
+  float: left;
+  max-width: 520px;
+  color: black;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  padding-right: 30px;
+  padding-left: 40px;
+ }
+
+}
+
+  </style>
+  <body>
+    <nav>
+      <ul>
+<li class="logo"><img src="img/logo1.png" width="180"></li>
+<li class="items"><a href="#">Home</a></li>
+<li class="items"><a href="#">About</a></li>
+<li class="items"><a href="#">Blogs</a></li>
+<li class="items"><a href="#">Contact</a></li>
+<li class="items"><a href="#">Feedback</a></li>
+<li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+</ul>
+</nav>
+    <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script>
+
+
+
+    <!-- slier part -->
+
+    <div id="wowslider-container1" class="slider3">
+  <div class="ws_images" style="width: 100%; height: 500px;"><ul style="height: 900px;">
+    <li><img src="data1/images/11.jpg" alt="11" title="11" id="wows1_0"/></li>
+    <li><img src="data1/images/12.jpg" alt="12" title="12" id="wows1_1"/></li>
+    <li><img src="data1/images/13.jpg" alt="13" title="13" id="wows1_2"/></li>
+    <li><img src="data1/images/14.jpg" alt="14" title="14" id="wows1_3"/></li>
+    <li><img src="data1/images/31.jpg" alt="31" title="31" id="wows1_4"/></li>
+    <li><img src="data1/images/aboutus2.jpg" alt="About-us-2" title="About-us-2" id="wows1_5"/></li>
+    <li><a href="http://wowslider.net"><img src="data1/images/bgcareer.jpg" alt="carousel jquery" title="bgcareer" id="wows1_6"/></a></li>
+    <li><img src="data1/images/schoolrobotics2.jpg" alt="School-Robotics-2" title="School-Robotics-2" id="wows1_7"/></li>
+  </ul></div>
+  <div class="ws_bullets"><div>
+    <a href="#" title="11"><span><img src="data1/tooltips/11.jpg" alt="11"/>1</span></a>
+    <a href="#" title="12"><span><img src="data1/tooltips/12.jpg" alt="12"/>2</span></a>
+    <a href="#" title="13"><span><img src="data1/tooltips/13.jpg" alt="13"/>3</span></a>
+    <a href="#" title="14"><span><img src="data1/tooltips/14.jpg" alt="14"/>4</span></a>
+    <a href="#" title="31"><span><img src="data1/tooltips/31.jpg" alt="31"/>5</span></a>
+    <a href="#" title="About-us-2"><span><img src="data1/tooltips/aboutus2.jpg" alt="About-us-2"/>6</span></a>
+    <a href="#" title="bgcareer"><span><img src="data1/tooltips/bgcareer.jpg" alt="bgcareer"/>7</span></a>
+    <a href="#" title="School-Robotics-2"><span><img src="data1/tooltips/schoolrobotics2.jpg" alt="School-Robotics-2"/>8</span></a>
+  </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net"></a></div>
+  <div class="ws_shadow"></div>
+  </div>  
+</div>
+</div>
+
+  <script type="text/javascript" src="engine1/wowslider.js"></script>
+  <script type="text/javascript" src="engine1/script.js"></script>
+  <!-- End WOWSlider.com BODY section -->
+  
+<div class="conatiner one">
+  <h2>Welcome to EliDIA Technologies</h2>
+  <p>The person who learns, who knows how to apply knowledge practically has the ability to create his imagination into reality.We are here to give wings to your innovative mind and help to make your imagination into reality.
+
+</p>
+
+</div>
+  <!-- Our Courses -->
+
+<div class="main">
+
+  Our Courses
+
+</div>
+
+<div class="images">
+  <div class="gallery">
+    <img src="img/14.jpg">
+    <div class="desc">Python Programming </div>
+      
+    </div>
+    
+
+    <div class="gallery">
+    <img src="img/15.jpg">
+    <div class="desc">Python Programming </div>
+      
+    </div>
+    <div class="gallery">
+    <img src="img/16.jpg">
+    <div class="desc">Python Programming </div>
+      </div>
+    </div>
+
+<div class="images" style="margin-top: 20px;">
+
+     <div class="gallery" style="margin-top: 30px;">
+    <img src="img/17.jpg">
+    <div class="desc" >Python Programming </div>
+      
+    </div>
+    
+
+    <div class="gallery" style="margin-top: 30px;">
+    <img src="img/18.jpg">
+    <div class="desc">Python Programming </div>
+      
+    </div>
+    <div class="gallery" style="margin-top: 30px;">
+    <img src="img/19.jpg">
+    <div class="desc">Python Programming </div>
+      
+    </div>
+  </div>
+  
+<div class="contact">
+  <div class="one1" style="background-color: lightblue;">
+ <h1 style="padding: 20px;padding-top:80px;">CONTACT INFORMATION</h1>
+      <p style="padding: 10px;text-align: center;">Shop Number 2,Ramchandra Talkies, Below Mahavir HeightsHanuman Nagar, Veer Savarkar Road, Dombivli East</p>
+      
+      <p style="text-align: center;">432, Ramwadi Nandura road</p>
+      <p style="text-align: center;">Malkapur Dist. Buldhana 443101</p>
+
+
+<p style="text-align: center;">+91 8329363533</p>
+<p style="text-align: center;">+91 8329334462
+
+</p>
+<p style="text-align: center;">info@elidiatech.com
+</p>      
+    </div>
+    
+
+    <div class="one1 t" style="background-color: #fafafa;  text-align: center;">
+<div>Your Name (required)
+</div>
+<input type="text" name="" id="form">
+<br>
+<div>Your Email (required)
+</div>
+<input type="Email" name="" id="form">
+<br>
+<div>Subject</div>
+<input type="Subject" name="" id="form">
+<br>
+<div>Your Message
+</div>
+<textarea id="form"></textarea> </div>
+
+</div>
+    </div>
+
+    
+  </div>
+  
+<div class="footer">
+  <h3>COPYRIGHT © 2020 ELIDIA TECHNOLOGIES. ALL RIGHT RESERVED DESIGN BY RP WEBS & POWERED BY COLIBRI</h3>
+  
+</div>
+
+
+</body>
+</html>
